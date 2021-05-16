@@ -41,6 +41,7 @@ from Python_ARQ import ARQ
 import json
 import wget
 chat_id = None
+arqapi = "BENQAG-MLEAFJ-RTPFWG-QRQJAN-ARQ"
 
            
 
@@ -602,7 +603,7 @@ async def deezer(client: Client, message_: Message):
     res = lel
     await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
     try:
-        arq = ARQ("https://thearq.tech")
+        arq = ARQ("https://thearq.tech", arqapi)
         r = await arq.deezer(query=queryy, limit=1)
         title = r[0]["title"]
         duration = int(r[0]["duration"])
